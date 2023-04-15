@@ -8,7 +8,8 @@ def read_input():
         findtxt=input().strip()
         txt=input().strip()
     elif type == 'F':
-        with open(input().strip(),'r') as f:
+        file ='/workspaces/string-pattern-kristapsskudra/tests/06'
+        with open(file,'r') as f:
             findtxt = f.readline().strip()
             txt = f.readline().strip()
     # after input type choice
