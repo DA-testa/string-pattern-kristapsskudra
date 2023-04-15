@@ -31,13 +31,13 @@ def get_occurrences(findtxt, txt):
     find_len = len(findtxt)
     txt_len = len(txt)
     find_hesh = hash(findtxt)
-    txt_hesh = hash(text[:find_len])
+    txt_hesh = hash(txt[:find_len])
     # check text for length txt - pattern length
     for i in range(txt_len - find_len +1):
-        if find_hesh == txt_hesh and findtxt == text[i:i+find_len]:
+        if find_hesh == txt_hesh and findtxt == txt[i:i+find_len]:
             occurrences.append(i)
         if i < txt_len - find_len:
-            txt_hesh = hash(text[i+1:i+find_len+1])
+            txt_hesh = hash(txt[i+1:i+find_len+1])
     # and return an iterable variable
     return occurrences
 
