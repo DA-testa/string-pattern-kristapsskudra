@@ -8,7 +8,7 @@ def read_input():
         findtxt=input().strip()
         txt=input().strip()
     elif type == 'F':
-        with open('test','r') as f:
+        with open(input().strip(),'r') as f:
             findtxt = f.readline().strip()
             txt = f.readline().strip()
     # after input type choice
