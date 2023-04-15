@@ -37,6 +37,7 @@ def get_occurrences(findtxt, txt):
     for i in range(txt_len - find_len +1):
         if find_hesh == txt_hesh and findtxt == txt[i:i+find_len]:
             occurrences.append(i)
+        # change main text-hesh to next
         if i < txt_len - find_len:
             txt_hesh = hash(txt[i+1:i+find_len+1])
     # and return an iterable variable
